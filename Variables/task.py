@@ -8,4 +8,6 @@ tip_calculation = (tip_amount / 100) * bill_amount
 
 final_bill = (bill_amount + tip_calculation) / split_bill
 
-print("Your final bill is: " + str(final_bill))
+round_value = f"{final_bill:.2f}" # format the final bill to 2 decimal places including the cents (that is, instead of 27.0, it should be 27.00)
+
+print("Your final bill is: " + str(round_value))
