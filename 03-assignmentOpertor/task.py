@@ -11,7 +11,7 @@ tip_calculation = ((tip) / 100) * (total_bill)
 
 amount_with_tip = total_bill + tip_calculation
 
-split_bill = float(input("How many people to split the bill? "))
+split_bill = int(input("How many people to split the bill? "))
 
 splited_bill = amount_with_tip / split_bill
 
