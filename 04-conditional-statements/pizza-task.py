@@ -1,5 +1,12 @@
 pizza_cost = 0
 
+your_age = int(input("What is your age? "))
+
+if your_age >= 45 and your_age <= 55:
+    print("You are within the age range, hence getting pizza for free")
+else:
+    print("Go on to answer other prompts")
+
 pizza_size = input("What Pizza size do you want? S, M or L? ")
 
 if pizza_size == "S":
@@ -43,11 +50,14 @@ else:
 extra_cheese = input("Add extra cheese for any size pizza (Y or N)? ")
 
 # Condition of all three pizza types
-if extra_cheese == "Y":
-    pizza_cost += 1
-    print(f"Your total cost is: ${pizza_cost}")
-elif extra_cheese == "N":
-    pizza_cost
-    print(f"Your total cost is: ${pizza_cost}")
+if 45 <= your_age <= 55:
+    print(f"Your total cost is $0")
 else:
-    print("You have typed an invalid option: Type Y or N")
+    if extra_cheese == "Y":
+        pizza_cost += 1
+        print(f"Your total cost is: ${pizza_cost}")
+    elif extra_cheese == "N":
+        pizza_cost
+        print(f"Your total cost is: ${pizza_cost}")
+    else:
+        print("You have typed an invalid option: Type Y or N")
