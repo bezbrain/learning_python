@@ -1,0 +1,6 @@
+// Disable copilot for just this project
+{
+  "github.copilot.enable": {
+    "*": false
+  }
+}
