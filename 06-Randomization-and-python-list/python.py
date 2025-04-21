@@ -1,8 +1,10 @@
 # Randomization and Python Lists
 import random
-import sys
+import my_module
 
+print(my_module.my_number)
 
+# Generating random integers
 random_number = random.randint(1, 5)
 
 what_to_choose = int(input("What is your guess number between 1 t0 5? "))
