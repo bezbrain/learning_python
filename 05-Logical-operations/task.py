@@ -7,22 +7,14 @@ print("Welcome to Treasure Island. Your mission is to find the treasure")
 # Level one
 # Level one
 direction = input("left or right ")
-different_directions_str = direction.upper() or direction.capitalize() or direction
+different_directions_str = direction.lower()
 
 level_two = ""
 level_three = ""
 
-if (
-    different_directions_str == "left"
-    or different_directions_str == "Left"
-    or different_directions_str == "LEFT"
-):
+if different_directions_str == "left":
     level_two = input("swim or wait ")
-elif (
-    different_directions_str == "right"
-    or different_directions_str == "Right"
-    or different_directions_str == "RIGHT"
-):
+elif different_directions_str == "right":
     print("Game Over")
     sys.exit()
 else:
@@ -32,18 +24,10 @@ else:
 
 # Level two
 # Level two
-diff_level_two_str = level_two.upper() or level_two.capitalize() or level_two
-if (
-    diff_level_two_str == "wait"
-    or diff_level_two_str == "Wait"
-    or diff_level_two_str == "WAIT"
-):
+diff_level_two_str = level_two.lower()
+if diff_level_two_str == "wait":
     level_three = input("Which door? red, blue or yellow? ")
-elif (
-    diff_level_two_str == "swim"
-    or diff_level_two_str == "Swim"
-    or diff_level_two_str == "SWIM"
-):
+elif diff_level_two_str == "swim":
     print("Game Over")
     sys.exit()
 else:
@@ -52,25 +36,13 @@ else:
 
 # Level three
 # Level three
-diff_level_three_str = level_three.upper() or level_three.capitalize() or level_three
-if (
-    diff_level_three_str == "yellow"
-    or diff_level_three_str == "Yellow"
-    or diff_level_three_str == "YELLOW"
-):
+diff_level_three_str = level_three.lower()
+if diff_level_three_str == "yellow":
     print("Congratulations, you won!")
-elif (
-    diff_level_three_str == "red"
-    or diff_level_three_str == "Red"
-    or diff_level_three_str == "RED"
-):
+elif diff_level_three_str == "red":
     print("Game Over")
     sys.exit()
-elif (
-    diff_level_three_str == "blue"
-    or diff_level_three_str == "Blue"
-    or diff_level_three_str == "BLUE"
-):
+elif diff_level_three_str == "blue":
     print("Game Over")
     sys.exit()
 else:
