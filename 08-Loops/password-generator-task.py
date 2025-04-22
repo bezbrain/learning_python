@@ -50,32 +50,20 @@ number_of_numbers = int(input("How many numbers would you like? "))
 
 # Extract required number of letters
 required_letters = ""
-for letter in letters:
-    random_numbers = math.floor(random.random() * len(letters))
-    chosen_letter = letters[random_numbers]
-    required_letters += chosen_letter
-    if len(required_letters) == number_of_letters:
-        break
+for letter in range(1, number_of_letters + 1):
+    required_letters += random.choice(letters)
 print(required_letters)
 
 # Extract required number of symbols
 required_symbols = ""
-for symbol in special_characters:
-    random_numbers = math.floor(random.random() * len(special_characters))
-    chosen_special_character = special_characters[random_numbers]
-    required_symbols += chosen_special_character
-    if len(required_symbols) == number_of_symbols:
-        break
+for symbol in range(1, number_of_symbols + 1):
+    required_symbols += random.choice(special_characters)
 print(required_symbols)
 
 # Extract required number of numbers
 required_numbers = ""
-for number in number_string:
-    random_numbers = math.floor(random.random() * len(number_string))
-    chosen_number = number_string[random_numbers]
-    required_numbers += chosen_number
-    if len(required_numbers) == number_of_numbers:
-        break
+for number in range(1, number_of_numbers + 1):
+    required_numbers += random.choice(number_string)
 print(required_numbers)
 
 my_static_password = f"{required_letters}{required_symbols}{required_numbers}"
