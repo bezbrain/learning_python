@@ -2,6 +2,7 @@ is_continue = True
 is_first_number = True
 
 
+# Perform arithmetics
 def check_sign(sign, first, second):
     if sign == "+":
         return first + second
@@ -15,6 +16,12 @@ def check_sign(sign, first, second):
         print("Invalid operation sign")
 
 
+# Operation list
+def operation():
+    print("What is the operation you want to perform? \n + \n - \n * \n / \n")
+    return input("Pick an operation: ")
+
+
 result = 0
 result_in_text = ""
 
@@ -22,18 +29,12 @@ while is_continue:
     if is_first_number:
         first_number = float(input("What is the first number? "))
 
-    operation_signs_list = print(
-        "What is the operation you want to perform? \n + \n - \n * \n / \n"
-    )
-    operation_sign = input("Pick an operation: ")
+    operation_sign = operation()
 
     # Check if sign is correct
     while operation_sign not in ["+", "-", "/", "*"]:
         print("INVALID SIGN INPUT")
-        operation_signs_list = print(
-            "What is the operation you want to perform? \n + \n - \n * \n / \n"
-        )
-        operation_sign = input("Pick an operation: ")
+        operation_sign = operation()
 
     next_number = float(input("What is the next number? "))
 
