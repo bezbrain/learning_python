@@ -41,6 +41,10 @@ while start_game == "y" and is_start:
             print(f"Your total card score is {your_card_total}")
             my_turn = False
             computer_turn = True
+            if your_card_total >= 21:
+                declare_winner.declare_winner_func(your_card_total, computer_card_total)
+                game_over()
+
         else:
             print(
                 f"Your card total is {your_card_total} while computer's is {computer_card_total}"
@@ -54,6 +58,9 @@ while start_game == "y" and is_start:
             print(f"Computer total is now: {computer_card_total}")
             my_turn = True
             computer_turn = False
+            if computer_card_total >= 21:
+                declare_winner.declare_winner_func(your_card_total, computer_card_total)
+                game_over()
         else:
             print(
                 f"Computer, your card total is {computer_card_total} while your opponent's is {your_card_total}"
